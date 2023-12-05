@@ -15,16 +15,11 @@ import io.cucumber.java.Scenario;
 
 public class browsersetup {
 		public WebDriver driver;
-		public NTTLMS_PF LMS;
 		public SL_Loginpage_PF login;
 		public SL_Products_page_PF products;
 		public HYRtutorials_Iframes_PF hyriframe;
 		public HRY_alerts_page_PF Hyralertspage;
 		
-
-		public NTTLMS_PF getLMS() {
-			return LMS;
-		}
 		
 
 		public WebDriver getDriver() {
@@ -36,7 +31,6 @@ public class browsersetup {
 		}
 
 		public void initializebrowser(WebDriver driver) {
-			LMS = new NTTLMS_PF(driver);
 			login =  new SL_Loginpage_PF(driver);
 			products = new SL_Products_page_PF(driver);
 			hyriframe = new HYRtutorials_Iframes_PF(driver);
